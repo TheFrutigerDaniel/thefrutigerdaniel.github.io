@@ -1,77 +1,25 @@
 <!DOCTYPE html>
-<style>
-marquee {
-    color: white;
-    background-color: #101a2c;
-    border: 1px solid #555555;
-    padding: 5px;
-    font-family:verdana;
-    font-weight: bold;
-    
-}
-body {
-    background-image: url("images/bg.gif");
-    background-repeat: repeat;
-    backgrund-color: #080d18;
-    color: #cccccc;
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>TCD</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
 
-    
-}
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-}
+<div class="lang"><img class="flag cur" src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2214%22><rect width=%2220%22 height=%2214%22 fill=%22%23fff%22/><rect y=%224.67%22 width=%2220%22 height=%224.67%22 fill=%22%230039a6%22/><rect y=%229.33%22 width=%2220%22 height=%224.67%22 fill=%22%23d52b1e%22/></svg>" alt="RU" title="Русский"> <a href="/en/" title="English"><img class="flag" src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2214%22><rect width=%2220%22 height=%2214%22 fill=%22%23b22234%22/><g fill=%22%23fff%22><rect y=%222%22 width=%2220%22 height=%222%22/><rect y=%226%22 width=%2220%22 height=%222%22/><rect y=%2210%22 width=%2220%22 height=%222%22/></g><rect width=%229%22 height=%228%22 fill=%22%233c3b6e%22/></svg>" alt="EN"></a></div>
 
-.header img {
-    width: 130px;
-    height: 100px;
-}
-
-.header h1 {
-    color: white;
-}
-.buttons {
-    display: flex;
-    width: 100%;
-}
-
-.buttons button {
-    flex: 1;
-    padding: 15px;
-    background-color: #101a2c;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.buttons button:hover {
-    background-color: #263957;
-}
-
-.content {
-    padding: 20px;
-    min-height: 400px;
-    color: #cccccc;
-}
-</style>
-<html>
 <div class="header">
-
-    <img src="images/logo.png" alt="Logo">
-
-    <h1 style="font-family:verdana">ДОБРО ПОЖАЛОВАТЬ НА МОЮ СТРАНИЦУ!!!</h1>
-
-    <img src="images/logo.png" alt="Logo">
-
+    <img src="/images/logo.png" alt="Logo">
+    <h1>ДОБРО ПОЖАЛОВАТЬ НА МОЮ СТРАНИЦУ!!!</h1>
+    <img src="/images/logo.png" alt="Logo">
 </div>
 
 <marquee id="ticker" scrollamount="10">
     Если ты видишь этот текст, то скорее всего твой скрипт чуть-чуть навернулся :)
 </marquee>
 <script>
-
 let messages = [
     "уииииииии :DDD",
     "Cпасибо что пришли!!!",
@@ -81,25 +29,17 @@ let messages = [
     "Катанронпа ДЕМО скоро выйдет, честно-честно!",
     "Хочешь новый текст? Обнови страничку!",
     "Я очень долго пыхтел над этим сайтом, всё вот это вот что вы видите написано МОИМИ. РУКАМИ.",
-    "I'm stiiiilllll in a dreeeeeeeaaaaaaaaammm snake eaaateeeeeeerrrrrr...."
+    "I'm stiiiilllll in a dreeeeeeeaaaaaaaaammm snake eaaateeeeeeerrrrrr....",
+    "AWG на iPad 2? Да. Зачем? Потому что могу."
 ];
-
-let randomIndex = Math.floor(Math.random() * messages.length);
-document.getElementById("ticker").textContent = messages[randomIndex];
-
+document.getElementById("ticker").textContent = messages[Math.floor(Math.random() * messages.length)];
 </script>
-<head>
-    <title>TCD</title>
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
-</head>
-<body>
-<div class="buttons">
 
+<div class="buttons">
     <button onclick="showPage('home')">ДОМОЙ</button>
     <button onclick="showPage('about')">ОБО МНЕ</button>
-    <button onclick="showPage('wiki')">TCD WIKI</button>
+    <a class="btn" href="/wiki/">TCD WIKI</a>
     <button onclick="showPage('works')">МОИ РАБОТЫ</button>
-
 </div>
 
 <div class="content">
@@ -108,71 +48,100 @@ document.getElementById("ticker").textContent = messages[randomIndex];
         <h2>Главная страница</h2>
         <p>Добро пожаловать на мой сайт!</p>
         <h4>Меня зовут <abbr title="TheCoolDaniel">TCD</abbr></h4>
-	<p>Я занимаюсь всякой всячиной вроде программирования, рисования, и прочего. Мне это очень нравится :)</p>
+        <p>Я занимаюсь всякой всячиной вроде программирования, рисования, и прочего. Мне это очень нравится :)</p>
         <p>Крутой сайт, правда?</p>
 
+        
     </div>
 
     <div id="about" class="page" hidden>
         <h2>Итак, обо мне</h2>
-	<p>
-	Как вы уже поняли, меня звать <abbr title="TheCoolDaniel">TCD</abbr>.</p>
-	
-        <p>Я обожаю всякие	железки, а особенно возиться с ними. Узнать о моём
-	"технопарке" вы можете на <strong>вики</strong> - вверху должна быть кнопка, которая вас туда переведёт.</p>
-
-	<p>Кроме железяк я программирую, например я написал вот этот вот сайт. Как замечательно,
-	не правда ли? Кроме <sup>(ЧУТЬ-ЧУТЬ)</sup>HTML я в основном пишу на C#.</p>
-
-	<p>Ах да, эм, я рисую всякое. У меня вроде как даже получается. Вы можете оценить мой талант на страничке
-	"МОИ РАБОТЫ".
-        </p>
-    </div>
-
-    <div id="wiki" class="page" hidden>
-        <img src="images/uc.gif"
-         alt="Under Construction"
-         width="150">
+        <p>Как вы уже поняли, меня звать <abbr title="TheCoolDaniel">TCD</abbr>.</p>
+        <p>Я обожаю всякие железки, а особенно возиться с ними. Узнать о моём
+        "технопарке" вы можете на <a href="/wiki/"><strong>TCD Wiki</strong></a> - это как Википедия, только СВОЯ!!!!!!.</p>
+        <p>Кроме железяк я программирую, например я написал вот этот вот сайт. Как замечательно,
+        не правда ли? Кроме <sup>(ЧУТЬ-ЧУТЬ)</sup>HTML я пишу на C#.</p>
+        <p>Ах да, эм, я рисую всякое. У меня вроде как даже получается. Вы можете оценить мой талант на страничке
+        "МОИ РАБОТЫ" → "ПОРИСУЛЬКИ".</p>
     </div>
 
     <div id="works" class="page" hidden>
-        <img src="images/uc.gif"
-         alt="Under Construction"
-         width="150">
+        <h2>Мои работы</h2>
+        <div class="buttons">
+            <button class="sel" onclick="showSub('soft')">СОФТ</button>
+            <button onclick="showSub('art')">ПОРИСУЛЬКИ</button>
+        </div>
+
+    <div id="soft" class="sub">
+        <h3>Софт</h3>
+        <div class="disclaimer">
+            <b>ПО-ЧЕСТНОМУ:</b> иногда я пишу код сам(как этот замечательный вебсайт), иногда я пользуюсь ии чисто так, ради прикола. Я буду помечать что вайбкод, а что - нет.
+        </div>
+        <ul>
+            <li><a href="https://github.com/TheFrutigerDaniel/awg-ios6"><b>AmneziaWG для iOS 6</b></a> <b>[с ИИ]</b> -
+                AmneziaWG для iOS 6, вау, нифигашеньки!
+                Собирается из-под Linux. Проверено на настоящем сервере, работает каждый день.</li>
+            <li><a href="https://github.com/TheFrutigerDaniel/amneziawg-mavericks"><b>AmneziaWG для OS X Mavericks</b></a> <b>[с ИИ]</b> -
+                порт amneziawg-go на мою любимую осыкс маверикс.</li>
+            <li><a href="/tcydia/"><b>tcydia</b></a> - мой репозиторий для Cydia, пока он хранит только клиент AWG для iOS 6, но i'm working on it! i'm working on it!!!!!!!.
+                Добавляй <code>tcd.is-a.dev/tcydia</code> в Cydia -> Sources.</li>
+            <li><a href="https://github.com/TheFrutigerDaniel/my-winui-stuff"><b>WinUI / WinForms штуки</b></a> - мои эксперименты на C#. Там, типа, часики :)</li>
+            <li><b>Катанронпа</b> - демо может выйдет, я хз если честно.
+
+        </ul>
+    </div>
+
+    <div id="art" class="sub" hidden>
+        <h3>Порисульки</h3>
+        <p>Я рисую всякое. У меня вроде как даже получается. Судите сами.</p>
+	<img src="/images/uc.gif" alt="Under Construction" width="100">
+        <div class="gallery">
+            <!--<figure>
+                <a href="/images/art/01.png"><img src="/images/art/01.png" alt="{{название}}"></a>
+                <figcaption>{{название}} <small>({{год}})</small></figcaption>
+            </figure>
+            <figure>
+                <a href="/images/art/02.png"><img src="/images/art/02.png" alt="{{название}}"></a>
+                <figcaption>{{название}} <small>({{год}})</small></figcaption>
+            </figure>
+            <figure>
+                <img src="/images/uc.gif" alt="Under Construction" width="100">
+                <figcaption>ещё рисую…</figcaption>
+            </figure>--!>
+        </div>
+    </div>
     </div>
 
 </div>
 
 <script>
 function showPage(pageName) {
-
-    let pages = document.querySelectorAll(".page");
-
-    pages.forEach(function(page) {
-        page.hidden = true;
-    });
-
+    document.querySelectorAll(".page").forEach(function (p) { p.hidden = true; });
     document.getElementById(pageName).hidden = false;
-
+    if (location.hash !== "#" + pageName) history.replaceState(null, "", "#" + pageName);
 }
+function showSub(subName) {
+    document.querySelectorAll("#works .sub").forEach(function (p) { p.hidden = true; });
+    document.querySelectorAll("#works .buttons button").forEach(function (b) { b.classList.remove("sel"); });
+    document.getElementById(subName).hidden = false;
+    document.querySelector("#works .buttons button[onclick*='" + subName + "']").classList.add("sel");
+    history.replaceState(null, "", "#" + subName);
+}
+(function () {
+    var h = location.hash.slice(1);
+    if (h === "soft" || h === "art") { showPage("works"); showSub(h); }
+    else if (h && document.getElementById(h)) showPage(h);
+})();
 </script>
-<div id="stats">
-    Посетителей:
-</div>
-<script data-goatcounter="https://thecooldaniel.goatcounter.com/count"
-        src="//gc.zgo.at/count.js"></script>
 
-<script>
-    window.goatcounter.visit_count({
-        append: '#stats',
-        path: 'TOTAL'
-    });
-</script>
-<p>
-    Последнее обновление:
-    <time datetime="2026-11-03">3 ноября 2026 года</time>
+<p class="footer">
+    Последнее обновление: <time datetime="2026-11-25">26 ноября 2026 года</time>
 </p>
+
+<div class="badges">
+    <a href="//thefrutigerdaniel.github.io/"><img src="/images/TCD.gif" alt="TCD" width="88" height="31"></a>
+    <a href="//lgrn-arts.ch"><img src="//lgrn-arts.ch/img/lgrn.gif" alt="lgrn arts" width="88" height="31"></a>
+</div>
+
 </body>
-<a href="//lgrn-arts.ch" target="_blank" rel="noopener" title="LGRN Arts"><img src="//lgrn-arts.ch/img/lgrn.gif"></a>
-<a href="//thefrutigerdaniel.github.io/tcd" target="_blank" rel="noopener" title="TheCoolDaniel"><img src="images/TCD.gif"></a>
 </html>
