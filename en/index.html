@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TCD</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="lang"><a href="/" title="Русский"><img class="flag" src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2214%22><rect width=%2220%22 height=%2214%22 fill=%22%23fff%22/><rect y=%224.67%22 width=%2220%22 height=%224.67%22 fill=%22%230039a6%22/><rect y=%229.33%22 width=%2220%22 height=%224.67%22 fill=%22%23d52b1e%22/></svg>" alt="RU"></a> <img class="flag cur" src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2214%22><rect width=%2220%22 height=%2214%22 fill=%22%23b22234%22/><g fill=%22%23fff%22><rect y=%222%22 width=%2220%22 height=%222%22/><rect y=%226%22 width=%2220%22 height=%222%22/><rect y=%2210%22 width=%2220%22 height=%222%22/></g><rect width=%229%22 height=%228%22 fill=%22%233c3b6e%22/></svg>" alt="EN" title="English"></div>
+
+<div class="header">
+    <img src="/images/logo.png" alt="Logo">
+    <h1>WELCOME TO MY HOMEPAGE!!!</h1>
+    <img src="/images/logo.png" alt="Logo">
+</div>
+
+<marquee id="ticker" scrollamount="10">
+    If you can read this, your script probably fell over a bit :)
+</marquee>
+<script>
+let messages = [
+    "wheeeeeeee :DDD",
+    "Thanks for stopping by!!!",
+    "I'm working on it!! I'm working on it!",
+    "This is your chance to become a [[BIG SHOT]]!!",
+    "Fun fact: the name of TCD's ThinkPad was hallucinated by a local LLM",
+    "Katanronpa DEMO coming soon, honest!",
+    "Want a different message? Reload the page!",
+    "I sweated over this site for a very long time. Everything you see here was typed by MY. OWN. HANDS.",
+    "I'm stiiiilllll in a dreeeeeeeaaaaaaaaammm snake eaaateeeeeeerrrrrr....",
+    "WireGuard on an iPad 2? Yes. Why? Because I can."
+];
+document.getElementById("ticker").textContent = messages[Math.floor(Math.random() * messages.length)];
+</script>
+
+<div class="buttons">
+    <button onclick="showPage('home')">HOME</button>
+    <button onclick="showPage('about')">ABOUT ME</button>
+    <a class="btn" href="/wiki/en/">TCD WIKI</a>
+    <button onclick="showPage('works')">MY WORKS</button>
+</div>
+
+<div class="content">
+
+    <div id="home" class="page">
+        <h2>Home page</h2>
+        <p>Welcome to my website!</p>
+        <h4>My name is <abbr title="TheCoolDaniel">TCD</abbr></h4>
+        <p>I do all sorts of things like programming, drawing, and whatnot. I really enjoy it :)</p>
+        <p>Cool site, right?</p>
+
+        
+    </div>
+
+    <div id="about" class="page" hidden>
+        <h2>So, about me</h2>
+        <p>As you've figured out by now, I go by <abbr title="TheCoolDaniel">TCD</abbr>.</p>
+        <p>I adore hardware of every kind, especially messing with it. You can learn about my
+        "tech park" on the <a href="/wiki/en/"><strong>TCD Wiki</strong></a> - it's like Wikipedia, but MINE!!!!!!.</p>
+        <p>Besides hardware I program; for example I wrote this very site. Wonderful,
+        isn't it? Apart from <sup>(A LITTLE)</sup>HTML I write C#.</p>
+        <p>Oh, and, um, I draw stuff. I'm sort of even good at it. You can judge my talent under
+        "MY WORKS" → "DOODLES".</p>
+    </div>
+
+    <div id="works" class="page" hidden>
+        <h2>My works</h2>
+        <div class="buttons">
+            <button class="sel" onclick="showSub('soft')">SOFTWARE</button>
+            <button onclick="showSub('art')">DOODLES</button>
+        </div>
+
+    <div id="soft" class="sub">
+        <h3>Software</h3>
+        <div class="disclaimer">
+            <b>HONESTLY:</b> sometimes I write the code myself (like this wonderful website), sometimes I just use AI for shits n giggles. I'll mark what's vibecoded and what's not.
+        </div>
+        <ul>
+            <li><a href="https://github.com/TheFrutigerDaniel/awg-ios6"><b>AmneziaWG for iOS 6</b></a> <b>[with AI]</b> -
+                AmneziaWG for iOS 6, wow, holy moly!
+                Builds from Linux. Tested against a real server, works every day.</li>
+            <li><a href="https://github.com/TheFrutigerDaniel/amneziawg-mavericks"><b>AmneziaWG for OS X Mavericks</b></a> <b>[with AI]</b> -
+                a port of amneziawg-go to my beloved OS Ex Mavericks.</li>
+            <li><a href="/tcydia/"><b>tcydia</b></a> - my Cydia repository; so far it only holds the AWG client for iOS 6, but i'm working on it! i'm working on it!!!!!!!.
+                Add <code>tcd.is-a.dev/tcydia</code> in Cydia -> Sources.</li>
+            <li><a href="https://github.com/TheFrutigerDaniel/my-winui-stuff"><b>WinUI / WinForms stuff</b></a> - my C# experiments. There's, like, a clock :)</li>
+            <li><b>Katanronpa</b> - a demo might come out, honestly no idea.
+                <img src="/images/uc.gif" alt="Under Construction" width="60"></li>
+        </ul>
+    </div>
+
+    <div id="art" class="sub" hidden>
+        <h3>Doodles</h3>
+        <p>I draw stuff. I'm sort of even good at it. Judge for yourself.</p>
+        <div class="gallery">
+            <figure>
+                <a href="/images/art/01.png"><img src="/images/art/01.png" alt="{{title}}"></a>
+                <figcaption>{{title}} <small>({{year}})</small></figcaption>
+            </figure>
+            <figure>
+                <a href="/images/art/02.png"><img src="/images/art/02.png" alt="{{title}}"></a>
+                <figcaption>{{title}} <small>({{year}})</small></figcaption>
+            </figure>
+            <figure>
+                <img src="/images/uc.gif" alt="Under Construction" width="100">
+                <figcaption>still drawing…</figcaption>
+            </figure>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<script>
+function showPage(pageName) {
+    document.querySelectorAll(".page").forEach(function (p) { p.hidden = true; });
+    document.getElementById(pageName).hidden = false;
+    if (location.hash !== "#" + pageName) history.replaceState(null, "", "#" + pageName);
+}
+function showSub(subName) {
+    document.querySelectorAll("#works .sub").forEach(function (p) { p.hidden = true; });
+    document.querySelectorAll("#works .buttons button").forEach(function (b) { b.classList.remove("sel"); });
+    document.getElementById(subName).hidden = false;
+    document.querySelector("#works .buttons button[onclick*='" + subName + "']").classList.add("sel");
+    history.replaceState(null, "", "#" + subName);
+}
+(function () {
+    var h = location.hash.slice(1);
+    if (h === "soft" || h === "art") { showPage("works"); showSub(h); }
+    else if (h && document.getElementById(h)) showPage(h);
+})();
+</script>
+
+<div id="stats">Visitors:</div>
+<script data-goatcounter="https://thecooldaniel.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+<script>
+    if (window.goatcounter) window.goatcounter.visit_count({ append: '#stats', path: 'TOTAL' });
+</script>
+
+<p class="footer">
+    Last updated: <time datetime="2026-11-26">26 November 2026</time>
+</p>
+
+<div class="badges">
+    <a href="//thefrutigerdaniel.github.io/"><img src="/images/TCD.gif" alt="TCD" width="88" height="31"></a>
+    <a href="//lgrn-arts.ch"><img src="//lgrn-arts.ch/img/lgrn.gif" alt="lgrn arts" width="88" height="31"></a>
+</div>
+
+</body>
+</html>
